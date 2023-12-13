@@ -92,11 +92,62 @@ fun ej18(){
 }
 
 fun ej20(){
-    print("Ingrese un número de teléfono con el siguiente formato +34*XXXXXXXXX-YY: ")
-    val telf = readln().split("-")
-    println("$telf")
+    try {
+        print("Ingrese un número de teléfono con el siguiente formato +34-XXXXXXXXX-YY: ")
+        val telf = readln().split("-")
+        println(telf[1])
 
     }
+    catch (_:Exception){
+        println("--ERROR--")
+    }
+}
 
+fun ej21(){
+    try {
+        print("Ingrese una frase: ")
+        val frase = readln()
+        print(frase.reversed())
+    }
+    catch (_:Exception){
+        print("--ERROR--")
+    }
+}
 
+fun ej22(){
+    try {
+        print("Ingrese una frase: ")
+        val frase: String = readln().lowercase()
+        print("Ingrese una vocal: ")
+        val vocal: String = readln().lowercase()
+        print(frase.replace(vocal, vocal.uppercase()))
+    }
+    catch (_:Exception){
+        print("--ERROR--")
+    }
+}
 
+fun ej24(){
+    try {
+        print("Ingrese el precio serparado por '.': ")
+        val precio = readln().split(".")
+        if (precio[1] != ""){
+            print("Serían ${precio[0]} euros y ${precio[1]} céntimos")}
+        else{
+            print("Serían ${precio[0]} euros y 0 céntimos")
+        }
+    }
+    catch (_:Exception){
+        print("--ERROR--")
+    }
+
+}
+
+fun ej25(){
+    print("Ingrese su fecha de nacimiento con el formato dd/mm/aaaa: ")
+    val fecha = readln().split("/")
+    val dia: Int = fecha[0].toInt()
+    val mes: Int = fecha[1].toInt()
+    val año: Int = fecha[2].toInt()
+    print("Día $dia del $mes del $año")
+}
