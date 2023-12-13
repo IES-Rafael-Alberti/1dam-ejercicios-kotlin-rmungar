@@ -63,7 +63,7 @@ fun ej15() {
         var capital = readln().toFloat()
         var cont = 1
         do {
-            capital = ceil(capital + (capital * 0.04)).toFloat()
+            capital = (capital + (capital * 0.04)).toFloat()
             println("En el año $cont, el capital sería: $capital")
             cont += 1
 
@@ -75,15 +75,28 @@ fun ej15() {
     }
 }
 
+/**
+ * La función ej18 pedirá una cadena al usuario y la retornará de 3 formas distintas.
+ */
 fun ej18(){
     try {
         print("Introduce tu nombre: ")
         val nombre = readln().lowercase()
         println(nombre.lowercase())
         println(nombre.uppercase())
-        println(nombre.)
+        println(nombre)
     }
     catch (e:Exception){
         println("--ERROR--")
     }
 }
+
+fun ej20(){
+    print("Ingrese un número de teléfono con el siguiente formato +34*XXXXXXXXX-YY: ")
+    val telf = readln().split("-")
+    println("$telf")
+
+    }
+
+
+
