@@ -1,4 +1,5 @@
 import kotlin.math.ceil
+import kotlin.math.round
 
 /**
  * La función ej4 nos va a pedir un número para convertirlo a fahrenheit y controla la excepción en caso de que el input
@@ -9,10 +10,10 @@ fun ej4(){
         print("Ingrese un número: ")
         val num = readln().toFloat()
         val fahrenheit = (num * 9/5 +32)
-        print("La temperatura sería $fahrenheit grados.")
+        println("La temperatura sería $fahrenheit grados.")
     }
     catch (_:NumberFormatException){
-        print("--ERROR > FORMATO NO VÁLIDO--")
+        println("--ERROR > FORMATO NO VÁLIDO--")
     }
 }
 
@@ -30,7 +31,7 @@ fun ej6(){
         println("Precio sin iva: $siniva")
     }
     catch (_:NumberFormatException){
-        print("--ERROR > FORMATO NO VÁLIDO--")
+        println("--ERROR > FORMATO NO VÁLIDO--")
     }
 }
 
@@ -49,7 +50,7 @@ fun ej12(){
 
     }
     catch (_:NumberFormatException){
-        print("--ERROR > FORMATO NO VÁLIDO--")
+        println("--ERROR > FORMATO NO VÁLIDO--")
     }
 }
 
@@ -71,7 +72,7 @@ fun ej15() {
         while (cont != 4)
     }
     catch (_:NumberFormatException){
-        print(("--ERROR > FORMATO NO VÁLIDO--"))
+        println(("--ERROR > FORMATO NO VÁLIDO--"))
     }
 }
 
@@ -107,10 +108,10 @@ fun ej21(){
     try {
         print("Ingrese una frase: ")
         val frase = readln()
-        print(frase.reversed())
+        println(frase.reversed())
     }
     catch (_:Exception){
-        print("--ERROR--")
+        println("--ERROR--")
     }
 }
 
@@ -120,10 +121,10 @@ fun ej22(){
         val frase: String = readln().lowercase()
         print("Ingrese una vocal: ")
         val vocal: String = readln().lowercase()
-        print(frase.replace(vocal, vocal.uppercase()))
+        println(frase.replace(vocal, vocal.uppercase()))
     }
     catch (_:Exception){
-        print("--ERROR--")
+        println("--ERROR--")
     }
 }
 
@@ -138,16 +139,47 @@ fun ej24(){
         }
     }
     catch (_:Exception){
-        print("--ERROR--")
+        println("--ERROR--")
     }
 
 }
 
 fun ej25(){
-    print("Ingrese su fecha de nacimiento con el formato dd/mm/aaaa: ")
-    val fecha = readln().split("/")
-    val dia: Int = fecha[0].toInt()
-    val mes: Int = fecha[1].toInt()
-    val año: Int = fecha[2].toInt()
-    print("Día $dia del $mes del $año")
+    try {
+        print("Ingrese su fecha de nacimiento con el formato dd/mm/aaaa: ")
+        val fecha = readln().split("/")
+        val dia: Int = fecha[0].toInt()
+        val mes: Int = fecha[1].toInt()
+        val año: Int = fecha[2].toInt()
+        println("Día $dia del $mes del $año")
+    }
+    catch (_:Exception){
+        println("--ERROR--")
+    }
+}
+
+fun ej26(){
+    try {
+        print("Introduzca artículos de la compra en una lista separados por comas: ")
+        val compra = readln().split(", ")
+        for(item in compra) println(item)
+    }
+    catch (_:Exception){
+        println("--ERROR--")
+    }
+}
+
+fun ej27(){
+    try {
+        print("Ingrese el producto: ")
+        val producto = readln().uppercase()
+        print("Ingrese el precio del producto con ., por favor: ")
+        val precio = readln().toFloat()
+        print("Ingrese la cantidad deseada: ")
+        val cantidad = readln().toFloat()
+        println("$producto -> tiene un precio unitario de: ${round(precio)} y $cantidad unidades tienen un precio de: ${round(precio * cantidad)}€")
+    }
+    catch (_:Exception){
+        println("--ERROR--")
+    }
 }
