@@ -41,12 +41,46 @@ fun U2_C_3(){
 }
 
 fun U2_C_6(){
-    print("Ingresa el nombre: ")
-    val nombre = readln().uppercase()
-    print("Ingrese su sexo: ")
-    val sexo = readln().uppercase()
-    if (sexo == "MUJER" && nombre < "M" || sexo == "HOMBRE" && nombre > "N") print("Perteneces al gurpo A")
+    try {
+        print("Ingresa el nombre: ")
+        val nombre = readln().uppercase()
+        print("Ingrese su sexo: ")
+        val sexo = readln().uppercase()
+        if (sexo == "MUJER" && nombre < "M" || sexo == "HOMBRE" && nombre > "N") print("Perteneces al gurpo A")
+        else {
+            print("Perteneces al grupo B")
+        }
+    }
+    catch (_:Exception) {
+        print("--ERROR--")
+    }
+}
+
+fun U2_C_8(){
+    try {
+        print("Ingresa la puntuación del empleado: ")
+        val puntuacion = readln().toDouble()
+        println("-------------------------------------")
+        if (puntuacion == 0.0) print("Su nivel de rendimiento es Inaceptable, no recibirás dinero.")
+        if (puntuacion == 0.4) print("Su nivel de rendimiento es Aceptable, recibirás: 960.0€")
+        if (puntuacion >= 0.6) print("Su nivel de rendimiento es Meritorio, recibirás: ${2400*puntuacion}€")
+    }
+    catch (_:NumberFormatException){
+        print("--ERROR - FORMATO NO VÁLIDO--")
+    }
+}
+
+fun U2_C_10(){
+    print("Ingresa el tipo de pizza que quieres: ")
+    val tipo = readln().lowercase()
+    if (tipo == "vegetariana"){
+        print("Ingredientes vegetarianos: Pimiento y Tofu ")
+        print("¿Cuál de los ingredientes anteriores quieres? ")
+        val ingrediente = readln().lowercase()
+        if
+    }
+    if (tipo == "no vegetariana") print("Ingredientes no vegetarianos: Peperoni, Jamon y Salmon")
     else {
-        print("Perteneces al grupo B")
+        print("Ese tipo de pizza no lo tenemos")
     }
 }
