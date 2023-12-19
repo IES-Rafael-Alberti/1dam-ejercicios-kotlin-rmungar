@@ -43,4 +43,10 @@ fun U2_C_3(){
 fun U2_C_6(){
     print("Ingresa el nombre: ")
     val nombre = readln().uppercase()
+    print("Ingrese su sexo: ")
+    val sexo = readln().uppercase()
+    if (sexo == "MUJER" && nombre < "M" || sexo == "HOMBRE" && nombre > "N") print("Perteneces al gurpo A")
+    else {
+        print("Perteneces al grupo B")
+    }
 }
