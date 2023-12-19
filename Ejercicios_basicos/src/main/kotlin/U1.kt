@@ -91,7 +91,9 @@ fun ej18(){
         println("--ERROR--")
     }
 }
-
+/**
+ * La función ej20 pedirá una cadena al usuario, modificará la cadena y retornará una parte de esta
+ */
 fun ej20(){
     try {
         print("Ingrese un número de teléfono con el siguiente formato +34-XXXXXXXXX-YY: ")
@@ -103,7 +105,9 @@ fun ej20(){
         println("--ERROR--")
     }
 }
-
+/**
+ * La función ej21 pedirá una cadena al usuario y la retornará de manera inversa.
+ */
 fun ej21(){
     try {
         print("Ingrese una frase: ")
@@ -114,7 +118,10 @@ fun ej21(){
         println("--ERROR--")
     }
 }
-
+/**
+ * La función ej18 pedirá una frase y una vocal al usuario y cambiará la vocal especificada por ella misma en mayúsculas
+ * y retornará la misma cadena con los cambios pertinentes.
+ */
 fun ej22(){
     try {
         print("Ingrese una frase: ")
@@ -127,7 +134,10 @@ fun ej22(){
         println("--ERROR--")
     }
 }
-
+/**
+ * La función ej24 pedirá un precio al usuario separado por un punto, y retornará una cadena indicando los euros y los
+ * centimos.
+ */
 fun ej24(){
     try {
         print("Ingrese el precio serparado por '.': ")
@@ -143,7 +153,10 @@ fun ej24(){
     }
 
 }
-
+/**
+ * La función ej25 pedirá una fecha al usuario, dividirá esta en dias, meses y años y retornará una cadena empleando
+ * estos datos.
+ */
 fun ej25(){
     try {
         print("Ingrese su fecha de nacimiento con el formato dd/mm/aaaa: ")
@@ -157,7 +170,9 @@ fun ej25(){
         println("--ERROR--")
     }
 }
-
+/**
+ * La función ej26 pedirá al usuario que ingrese una lista con elementos separados por comas y los imprimirá 1 por 1.
+ */
 fun ej26(){
     try {
         print("Introduzca artículos de la compra en una lista separados por comas: ")
@@ -168,7 +183,9 @@ fun ej26(){
         println("--ERROR--")
     }
 }
-
+/**
+ * La función ej27 pedirá varios inputs al usuario, los guardará y posteriormente retornará una cadena con esos datos.
+ */
 fun ej27(){
     try {
         print("Ingrese el producto: ")
