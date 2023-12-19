@@ -33,7 +33,7 @@ fun main() {
         print("¿Quieres buscar otro? (s/n) -> ")
 
         querer = readln().lowercase()
-        if (querer == "s") limpiarconsola()
+        if (querer != "n") limpiarconsola()
 
 
     }
