@@ -74,7 +74,7 @@ fun U2_C_10(){
     val bas = listOf("Tomate","Mozarella")
     val veganas = listOf("pimiento", "tofu")
     val noVeganas = listOf("peperoni", "jamon", "salmon")
-    print("Ingresa el tipo de pizza que quieres: ")
+    print("Ingresa el tipo de pizza que quieres (vegetariana o no vegetariana): ")
     val tipo = readln().lowercase()
     if (tipo == "vegetariana"){
         println("Elige uno de los siguientes ingredientes: Pimiento y Tofu ")
