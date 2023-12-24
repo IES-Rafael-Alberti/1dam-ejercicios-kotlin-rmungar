@@ -94,3 +94,67 @@ fun U2_I_13(){
         }
     }
 }
+
+
+fun U2_I_15() {
+    var positivos = 0
+    print("Dame un número: ")
+    try {
+        var entrada = readln().toInt()
+        while (entrada != 0) {
+            if (entrada > 0) {
+                positivos += 1
+                print("Dame otro número: ")
+                entrada = readln().toInt()
+            } else {
+                print("Dame otro número: ")
+                entrada = readln().toInt()
+            }
+        }
+        print("Números positivos introducidos: $positivos")
+    }
+    catch (_:NumberFormatException){
+        println("--ERROR - FORMATO NO VÁLIDO--")
+        print("Números positivos introducidos: $positivos")
+    }
+}
+
+//fun U2_I_18(){
+//    print("Dame un número (-1 finaliza el programa): ")
+//    val num = readln().toInt()
+//    var pares = 0
+//    while (num != -1){
+//      var total = 0
+//      if (num%2 == 0) pares += 1
+//      while (num != 0) {
+//          val d1 = num%10
+//          total += d1
+//      }
+//  }
+//}
+
+fun U2_I_19(): String {
+    print(" 1 - COMENZAR PROGRAMA")
+    println(" 2 - IMPRIMIR TEXTO")
+    println(" 3 - FINALIZAR PROGRAMA")
+    print("Ingrese una opcion: ")
+    try {
+        var opcion = readln().toInt()
+        while (opcion != 3){
+            if (opcion == 1){
+                print("INICIO")
+                print("Ingrese ua opcion: ")
+                opcion = readln().toInt()
+            }
+            else {
+                print("Spiderman 2 GOTY")
+                print("Ingrese ua opcion: ")
+                opcion = readln().toInt()
+            }
+        }
+        return ("FIN")
+    }
+    catch (_:NumberFormatException){
+        return ("--ERROR - OPCIÓN NO VÁLIDA--")
+    }
+}
