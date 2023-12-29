@@ -1,4 +1,4 @@
-
+package U2
 fun U2_C_2(){
     val contraseñaGuardada = "rmungar1209"
     var valido = false
@@ -8,13 +8,12 @@ fun U2_C_2(){
             println("--------------------------------------------------")
             val contraseñaIntroducida = readln()
             if (contraseñaIntroducida == contraseñaGuardada) {
-                print("CONTRASEÑA CORRECTA")
+                println("CONTRASEÑA CORRECTA")
                 valido = true
             }
-            if (contraseñaIntroducida == "") valido = true
             else {
                 println("CONTRASEÑA INCORRECTA")
-                print("--------------------------------------------------")
+                println("--------------------------------------------------")
             }
     }}
     catch (_:Exception) {
@@ -29,14 +28,14 @@ fun U2_C_3(){
         print("Dame otro número: ")
         val num2 = readln().toFloat()
         if (num2 == 0.toFloat()){
-            print("Este número no puede ser 0")
+            println("Este número no puede ser 0")
         }
         else{
-            print("Resultado = ${num1/num2}")
+            println("Resultado = ${num1/num2}")
         }
     }
     catch (_:NumberFormatException) {
-        print("--ERROR - FORMATO NO VÁLIDO--")
+        println("--ERROR - FORMATO NO VÁLIDO--")
     }
 }
 
@@ -46,13 +45,13 @@ fun U2_C_6(){
         val nombre = readln().uppercase()
         print("Ingrese su sexo: ")
         val sexo = readln().uppercase()
-        if (sexo == "MUJER" && nombre < "M" || sexo == "HOMBRE" && nombre > "N") print("Perteneces al gurpo A")
+        if (sexo == "MUJER" && nombre < "M" || sexo == "HOMBRE" && nombre > "N") println("Perteneces al gurpo A")
         else {
-            print("Perteneces al grupo B")
+            println("Perteneces al grupo B")
         }
     }
     catch (_:Exception) {
-        print("--ERROR--")
+        println("--ERROR--")
     }
 }
 
@@ -61,12 +60,12 @@ fun U2_C_8(){
         print("Ingresa la puntuación del empleado: ")
         val puntuacion = readln().toDouble()
         println("-------------------------------------")
-        if (puntuacion == 0.0) print("Su nivel de rendimiento es Inaceptable, no recibirás dinero.")
-        if (puntuacion == 0.4) print("Su nivel de rendimiento es Aceptable, recibirás: 960.0€")
-        if (puntuacion >= 0.6) print("Su nivel de rendimiento es Meritorio, recibirás: ${2400*puntuacion}€")
+        if (puntuacion == 0.0) println("Su nivel de rendimiento es Inaceptable, no recibirás dinero.")
+        if (puntuacion == 0.4) println("Su nivel de rendimiento es Aceptable, recibirás: 960.0€")
+        if (puntuacion >= 0.6) println("Su nivel de rendimiento es Meritorio, recibirás: ${2400*puntuacion}€")
     }
     catch (_:NumberFormatException){
-        print("--ERROR - FORMATO NO VÁLIDO--")
+        println("--ERROR - FORMATO NO VÁLIDO--")
     }
 }
 

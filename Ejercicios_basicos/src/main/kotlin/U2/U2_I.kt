@@ -1,4 +1,4 @@
-
+package U2
 
 fun U2_I_2(){
     try {
@@ -67,7 +67,7 @@ fun U2_I_7(){
     }
 }
 
-//fun U2_I_8(){
+fun U2_I_8(){
 //  print("Dame un número: ")
 //  try {
 //      val num = readln().toInt()
@@ -81,7 +81,7 @@ fun U2_I_7(){
 //  catch (_:NumberFormatException){
 //      print("--ERROR - FORMATO NO VÁLIDO--")
 //  }
-//}
+}
 
 fun U2_I_13(){
     var vali = 0
@@ -119,7 +119,7 @@ fun U2_I_15() {
     }
 }
 
-//fun U2_I_18(){
+fun U2_I_18(){
 //    print("Dame un número (-1 finaliza el programa): ")
 //    val num = readln().toInt()
 //    var pares = 0
@@ -131,7 +131,7 @@ fun U2_I_15() {
 //          total += d1
 //      }
 //  }
-//}
+}
 
 fun U2_I_19(): String {
     print(" 1 - COMENZAR PROGRAMA")
