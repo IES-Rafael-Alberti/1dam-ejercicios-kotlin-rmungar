@@ -95,7 +95,6 @@ fun U2_I_13(){
     }
 }
 
-
 fun U2_I_15() {
     var positivos = 0
     print("Dame un número: ")
