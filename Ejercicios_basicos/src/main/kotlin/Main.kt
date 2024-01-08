@@ -1,8 +1,5 @@
+import U3.*
+
 fun main() {
-    //menu1()
-    //U2_C_2()
-    //U2_C_3()
-    //U2_C_6()
-    //U2_C_8()
-    U2_C_10()
+    general()
     }
