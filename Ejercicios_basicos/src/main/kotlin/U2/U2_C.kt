@@ -101,11 +101,3 @@ fun U2_C_10(){
         print("Ese tipo de pizza no vale")
     }
 }
-
-fun U2_I_2(){
-    print("Dime tu edad: ")
-    val edad = readln().toInt()
-    val años = listOf("0 ")
-    for
-
-}
